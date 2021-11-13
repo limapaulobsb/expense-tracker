@@ -2,25 +2,26 @@ import React, { useContext } from 'react';
 
 import { GlobalContext } from '../context/GlobalState';
 import { formatAmount } from '../helpers';
+import '../styles/IncomeExpenses.css';
 
 export default function IncomeExpenses() {
-  const { records } = useContext(GlobalContext);
+  const { monthDt, records } = useContext(GlobalContext);
 
   const income = records
-    .filter((element) => element.amount > 0)
+    .filter((e) => e.year === monthDt.year && e.month === monthDt.month && e.amount > 0)
     .reduce((acc, curr) => acc + Number(curr.amount), 0);
   const expenses = records
-    .filter((element) => element.amount < 0)
+    .filter((e) => e.year === monthDt.year && e.month === monthDt.month && e.amount < 0)
     .reduce((acc, curr) => acc + Number(curr.amount), 0);
 
   return (
     <section className='income-expenses'>
       <div>
-        <h3>Renda:</h3>
+        <h4>Renda:</h4>
         <span className='text--positive'>{formatAmount(income)}</span>
       </div>
       <div>
-        <h3>Despesas:</h3>
+        <h4>Despesas:</h4>
         <span className='text--negative'>{formatAmount(expenses)}</span>
       </div>
     </section>

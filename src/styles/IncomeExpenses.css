@@ -1,0 +1,24 @@
+.income-expenses {
+  align-items: center;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.income-expenses > div {
+  width: 50%;
+}
+
+.income-expenses > div:first-child {
+  border-right: 1px solid var(--light-gray-3);
+}
+
+.income-expenses h4 {
+  text-transform: uppercase;
+}
+
+.income-expenses span {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,32 @@
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: 0.8s ease;
+  visibility: hidden;
+  width: 100%;
+  z-index: 10;
+}
+
+.backdrop--visible {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+.modal {
+  left: calc(50% - 140px);
+  opacity: 0;
+  position: fixed;
+  top: calc(50% - 175px);
+  transition: 0.8s ease;
+  visibility: hidden;
+  z-index: 20;
+}
+
+.modal--visible {
+  opacity: 1;
+  visibility: visible;
+}

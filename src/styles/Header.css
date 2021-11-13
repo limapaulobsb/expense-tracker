@@ -1,0 +1,48 @@
+header {
+  background-color: var(--yellow);
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  box-shadow: var(--box-shadow);
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+header > div:first-child {
+  padding: 20px 0;
+}
+
+header > div:nth-child(2) {
+  background-color: white;
+  padding: 5px 0;
+}
+
+.month-selectors-container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.main-selector-container {
+  align-items: center;
+  display: flex;
+  flex-grow: 10;
+  justify-content: center;
+}
+
+.month-selector {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 5px;
+}

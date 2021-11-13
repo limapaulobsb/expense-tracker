@@ -1,0 +1,70 @@
+.add-record > h3 {
+  border-bottom: 1px solid var(--light-gray-1);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.add-record > form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-record__inputs-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Misalignment bug */
+.add-record__input-group {
+  display: flex;
+}
+
+.add-record input {
+  border: 1px solid var(--light-gray-2);
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  height: 40px;
+  padding: 0 10px;
+  width: 240px;
+}
+
+.add-record input:disabled {
+  background-color: var(--light-gray-3);
+  border: 1px solid var(--light-gray-1);
+}
+
+.add-record__calendar-button {
+  background-color: var(--yellow);
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  height: 40px;
+  width: 40px;
+}
+
+.add-record__submit-button {
+  background-color: var(--yellow);
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  max-width: 400px;
+  padding: 10px;
+  width: 100%;
+}
+
+.add-record__inputs-container > div:last-child {
+  position: relative;
+}
+
+.add-record__calendar-container {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
